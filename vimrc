@@ -13,10 +13,11 @@ Plugin 'vim-scripts/mru.vim'
 call vundle#end() 
 filetype plugin indent on
 
-set cursorline
+set cursorlie
 set visualbell
 source $VIMRUNTIME/vimrc_example.vim
 autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))
+set nobackup
 colorscheme codedark
 set t_Co=256
 set t_ut=
