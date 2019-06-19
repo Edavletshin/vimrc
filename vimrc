@@ -13,8 +13,12 @@ Plugin 'vim-scripts/mru.vim'
 call vundle#end() 
 filetype plugin indent on
 
-set cursorlie
+set cursorline
 set visualbell
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+
 source $VIMRUNTIME/vimrc_example.vim
 autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))
 set nobackup
@@ -36,5 +40,7 @@ map <C-v> p
 
 imap <F2> <esc>:w<cr>i
 map <F2> <esc>:w<cr>
+imap <F3> <esc>:wq<cr>
 map <F3> <esc>:wq<cr>
+imap <F4> <esc>:w!<cr>
 map <F4> <esc>:w!<cr>
